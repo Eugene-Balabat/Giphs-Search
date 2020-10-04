@@ -1,0 +1,39 @@
+body {
+     min-width: 1024px;
+     width: 1px;
+     margin: 0 auto;
+}
+
+.container-padding50 {
+     position: relative;
+     min-width: inherit;
+     width: inherit;
+     padding-top: 50px;
+}
+
+.container-textinput {
+     position: absolute;
+     width: 100%;
+     width: -moz-available; /* For Mozzila */
+     width: -webkit-fill-available; /* For Chrome */
+     width: stretch; /* Unprefixed */
+     display: inline-block;
+     padding: 20px;
+     font-size: 16px;
+     font-family: Helvetica, sans-serif;
+}
+
+.container-images {
+     min-width: inherit;
+     width: inherit;
+     margin-top: 100px;
+}
+
+.container-image {
+     width: 30%;
+     display: block;
+     float: inline-start;
+
+     margin-right: auto;
+     margin-left: 2.5%;
+}
