@@ -1,39 +1,51 @@
 body {
-     min-width: 1024px;
-     width: 1px;
-     margin: 0 auto;
+  background-color: #222127;
+  min-width: 1024px;
+  width: 1px;
+  margin: 0 auto;
 }
 
 .container-padding50 {
-     position: relative;
-     min-width: inherit;
-     width: inherit;
-     padding-top: 50px;
+  position: relative;
+  min-width: inherit;
+  width: inherit;
+  padding-top: 50px;
 }
 
 .container-textinput {
-     position: absolute;
-     width: 100%;
-     width: -moz-available; /* For Mozzila */
-     width: -webkit-fill-available; /* For Chrome */
-     width: stretch; /* Unprefixed */
-     display: inline-block;
-     padding: 20px;
-     font-size: 16px;
-     font-family: Helvetica, sans-serif;
+  background-color: #f5ebd2;
+  position: absolute;
+  width: 100%;
+  width: -moz-available; /* For Mozzila */
+  width: -webkit-fill-available; /* For Chrome */
+  width: stretch; /* Unprefixed */
+  display: inline-block;
+  padding: 15px 20px;
+  font-size: 25px;
+  border-radius: 10px;
+  font-family: 'Peddana', serif;
+  /* font-family: 'Chilanka', cursive; */
+}
+
+.container-textinput:focus {
+  background-color: #f6e1ac;
 }
 
 .container-images {
-     min-width: inherit;
-     width: inherit;
-     margin-top: 100px;
+  min-width: inherit;
+  width: inherit;
+  margin-top: 100px;
 }
 
 .container-image {
-     width: 30%;
-     display: block;
-     float: inline-start;
+  margin: 0;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
 
-     margin-right: auto;
-     margin-left: 2.5%;
+.image {
+  vertical-align: top;
+  width: 320px;
+  height: 260px;
 }
