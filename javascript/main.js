@@ -1,9 +1,11 @@
 /* 3. Show me the GIFs */
+
 function pushTo(input) {
   const url =
-    input && Boolean(input.trim())
-      ? `https://api.giphy.com/v1/gifs/search?api_key=0ZJRRFPcofu6YQDDqU6ghrleugGmYsKM&q=${input}&limit=27&offset=0&rating=g&lang=ru`
-      : `https://api.giphy.com/v1/gifs/trending?api_key=0ZJRRFPcofu6YQDDqU6ghrleugGmYsKM&limit=27&offset=0&rating=g&lang=ru`;
+    // input && Boolean(input.trim())
+    // ?
+    `https://api.giphy.com/v1/gifs/search?api_key=0ZJRRFPcofu6YQDDqU6ghrleugGmYsKM&q=${input}&limit=27&offset=0&rating=r&lang=ru`;
+  // : `https://api.giphy.com/v1/gifs/trending?api_key=0ZJRRFPcofu6YQDDqU6ghrleugGmYsKM&limit=27&offset=0&rating=g&lang=ru`;
 
   const conteiner = document.querySelector('.js-container');
   const gifslink = [];
@@ -22,8 +24,9 @@ function pushTo(input) {
       if (!gifslink.includes(giphid)) {
         const contenblock = document.createElement('div');
         const imageurl = element.images.original.webp;
+        const downloadurl = element.images.original.mp4;
 
-        contenblock.innerHTML = `<a href = ${imageurl} target = "_blank"> <image src = ${imageurl} class = "image"> </a>`;
+        contenblock.innerHTML = `<a href = ${downloadurl} target = "_blank"> <image src = ${imageurl} class = "image"> </a>`;
 
         conteiner.appendChild(contenblock).classList.add('container-image');
         gifslink.push(giphid);
@@ -39,8 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
   pushTo(document.querySelector('.js-userinput').value);
 });
 
+/* Waiting before shows result */
+
 $('.js-userinput').typeWatch({
-  captureLength: 1,
+  captureLength: 0,
   wait: 500,
   callback(value) {
     pushTo(value);
