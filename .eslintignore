@@ -1,3 +1,6 @@
 node_modules
 /.vscode
 /.git
+/routes
+/bin
+/app.js

@@ -25,7 +25,6 @@ function pushTo(input) {
         const contenblock = document.createElement('div');
         const imageurl = element.images.original.webp;
         const downloadurl = element.images.original.mp4;
-
         contenblock.innerHTML = `<a href = ${downloadurl} target = "_blank"> <image src = ${imageurl} class = "image"> </a>`;
 
         conteiner.appendChild(contenblock).classList.add('container-image');
@@ -45,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* Waiting before shows result */
 
 $('.js-userinput').typeWatch({
-  captureLength: 0,
+  captureLength: 1,
   wait: 500,
   callback(value) {
     pushTo(value);

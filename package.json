@@ -2,7 +2,7 @@
      "name": "giphysearch",
      "version": "1.0.0",
      "description": "",
-     "main": "./javascript/index.html",
+     "main": "/views/index.pug",
      "scripts": {
           "eslint": "eslint ./javascript",
           "eslint:fix": "eslint ./javascript --fix",
